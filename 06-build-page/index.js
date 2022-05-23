@@ -32,8 +32,8 @@ let filesArrStyles;
 
 		for (let i = 0; i < tempTags.length; i++) {
 			const tempHTML = await fs.promises.readFile(path.join(__dirname, 'components', `${tempTags[i].slice(2, tempTags[i].length - 2)}.html`), 'utf-8');
-			const temp = new RegExp(tempTags[i], 'gm');
 
+			const temp = new RegExp(tempTags[i], 'gm');
 			file = file.replace(temp, tempHTML);
 		}
 
